@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "mhha.sample.changeunits"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "mhha.sample.changeunits"
@@ -29,6 +29,9 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    viewBinding{
+        enable=true
     }
     kotlinOptions {
         jvmTarget = "1.8"

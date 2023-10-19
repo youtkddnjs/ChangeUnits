@@ -6,13 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText01"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:hint="자연수를 입력해주세요."
+        android:textSize="15sp"
+        android:textColorHint="@color/gray"
+        android:textStyle="italic"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp"
+        android:maxLength="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.3"/>
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        android:layout_marginTop="32dp"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/editText01"
+        app:layout_constraintEnd_toEndOf="@id/editText01"
+        app:layout_constraintStart_toStartOf="@id/editText01"
+        />
+
+    <TextView
+        android:id="@+id/unitsTextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/editText01"
+        app:layout_constraintTop_toTopOf="@+id/editText01"
+        app:layout_constraintBottom_toBottomOf="@+id/editText01"
+        />
+
+    <TextView
+        android:id="@+id/unitsTextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/textView01"
+        app:layout_constraintTop_toTopOf="@+id/textView01"
+        app:layout_constraintBottom_toBottomOf="@+id/textView01"
+        />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/swapImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_swap_vert_36"
+        app:layout_constraintTop_toTopOf="@id/editText01"
+        app:layout_constraintBottom_toBottomOf="@+id/textView01"
+        app:layout_constraintStart_toEndOf="@+id/unitsTextView01"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
